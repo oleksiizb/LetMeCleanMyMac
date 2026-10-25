@@ -6,8 +6,13 @@
 	objectVersion = 90;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6EFC0A76308E2090007B1B08 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC0A71308E2090007B1B08 /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* LetMeCleanMyMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetMeCleanMyMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EFC0A71308E2090007B1B08 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +37,7 @@
 			children = (
 				000000000000000000000010 /* LetWeCleanMyMac */,
 				000000000000000000000020 /* Products */,
+				6EFC0A71308E2090007B1B08 /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +108,7 @@
 		000000000000000140000000 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				6EFC0A76308E2090007B1B08 /* .gitignore in Resources */,
 			);
 		};
 /* End PBXResourcesBuildPhase section */
