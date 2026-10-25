@@ -10,7 +10,7 @@ import AppKit
 import CoreGraphics
 import ApplicationServices
 
-final class SystemInputLock {
+class SystemInputLock {
     static let shared = SystemInputLock()
 
     private var tap: CFMachPort?
@@ -22,7 +22,13 @@ final class SystemInputLock {
 
     // MARK: Permissions
 
-    private func hasPermissions() -> Bool {
+    public var hasPermissions = false
+    
+    init(){
+        hasPermissions = hasNeededPermissions()
+    }
+    
+    private func hasNeededPermissions() -> Bool {
         let opts = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true] as CFDictionary
         let accessibility = AXIsProcessTrustedWithOptions(opts)
 
@@ -36,7 +42,7 @@ final class SystemInputLock {
 
     func enable(autoUnlockAfter seconds: TimeInterval? = nil) {
         guard !isLocked else { return }
-        guard hasPermissions() else {
+        guard hasPermissions else {
             print("Grant Accessibility + Input Monitoring, then relaunch the app.")
             return
         }
