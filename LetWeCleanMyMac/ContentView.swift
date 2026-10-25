@@ -12,10 +12,10 @@ struct ContentView: View {
                 .foregroundColor(.white)
         }
         .onAppear {
-            InputLock.shared.enable()
+            SystemInputLock.shared.enable()
         }
         .onDisappear {
-            InputLock.shared.disable()
+            SystemInputLock.shared.disable()
         }
     }
 }
